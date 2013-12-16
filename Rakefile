@@ -3,4 +3,5 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+require 'css_sprite' if Rails.env.development?
 TodoOnRails::Application.load_tasks

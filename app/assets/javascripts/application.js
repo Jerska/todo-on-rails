@@ -10,7 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require moment
+//= require underscore
 //= require jquery
-//= require jquery_ujs
+//= require jquery.noty.packaged
+//= require angular
+//= require restangular
+//= require bootstrap
+//= require angular-bootstrap
+//= require angular-bootstrap-datetimepicker
+//= require dateTimeInput
 //= require turbolinks
 //= require_tree .

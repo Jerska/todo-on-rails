@@ -1,0 +1,34 @@
+.container ng-controller="TodosCtrl" ng-init="init()"
+  h1 Todos
+
+  ul
+    li
+      = form_tag '', "ng-submit" => "create()"
+        .done
+          input type="checkbox" ng-model="new.done"
+        .name
+          input type="text" ng-model="new.name" placeholder="Nouvelle chose à faire"
+        .due_date
+          input date-time-input="DD/MM/YYYY hh:mm" ng-model="new.due_date" placeholder="Avant ?"
+        .more
+          .dropdown
+            a.dropdown-toggle.due-date-button role="button" data-toggle="dropdown"
+              i.icon-calendar-day
+            ul.dropdown-menu role="menu" arial-labelledby="dLabel"
+              datetimepicker ng-model="new.due_date" datetimepicker-config="{dropdownSelector: 'li:first-child .due-date-button'}"
+        input type="submit" ng-hide="true"
+    li ng-repeat="todo in todos"
+      .done
+        input type="checkbox" ng-model="todo.done" ng-change="update(todo)"
+      .name
+        input type="text" ng-model="todo.name" ng-change="update(todo)"
+      .due_date
+        input date-time-input="DD/MM/YYYY hh:mm" ng-model="todo.due_date" ng-change="update(todo)" placeholder="Avant ?"
+      .more
+        .dropdown
+          a.dropdown-toggle.due-date-button role="button" data-toggle="dropdown"
+            i.icon-calendar-day
+          ul.dropdown-menu role="menu" arial-labelledby="dLabel"
+            datetimepicker ng-model="todo.due_date" ng-change="update(todo)" datetimepicker-config="{dropdownSelector: 'li:nth-child(' + ($index + 1) + ') .due-date-button'}"
+        a ng-click="delete(todo)"
+          i.icon-cross

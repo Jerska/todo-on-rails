@@ -1,0 +1,9 @@
+use_asset_url: true
+optimization: true
+source_images_path: app/sprites/
+suffix:
+  icon: |
+    display: inline-block;
+  arrow: |
+    display: inline-block;
+    cursor: pointer;

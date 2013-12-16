@@ -1,0 +1,13 @@
+.icon-calendar-day, .icon-cross {
+  background: asset-url('icons_css_sprite.png') no-repeat;
+}
+.icon-calendar-day {
+  background-position: 0px 0px;
+  width: 16px;
+  height: 16px;
+ }
+.icon-cross {
+  background-position: 0px -16px;
+  width: 16px;
+  height: 16px;
+ }

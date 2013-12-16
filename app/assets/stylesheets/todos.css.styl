@@ -1,0 +1,54 @@
+page-color = #fdef9b
+delimiter-color = #FF2300
+line-height = 70px
+
+line(font-size)
+  width 100%
+  border-bottom 2px solid delimiter-color
+  height line-height
+  font-size font-size
+  padding-top ((line-height - font-size) / 2) - 5px
+  margin 0
+
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  -o-box-shadow arguments
+  box-shadow arguments
+
+.container
+  background-color page-color
+  padding-bottom (line-height / 2)
+  border-radius 1em
+  border 1px solid #fef19e
+  margin 1em auto
+  box-shadow 2px 2px 6px 5px #ddd
+  &>h1
+    text-align center
+    line 30px
+  &>ul
+    padding-left 0
+    list-style-type none
+    width 100%
+    &>li
+      line 20px
+      div
+        display inline-block
+        text-align center
+        &>input
+          background-color transparent
+          border 0
+          width 100%
+      .done
+        width 5%
+      .name
+        width 70%
+      .due_date
+        width 15%
+      .more
+        width 10%
+        float right
+        a
+          cursor pointer
+        ul
+          width 200px
